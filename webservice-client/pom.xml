@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>ywl.example.springboot</groupId>
+	<artifactId>webservice-client</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>webservice-client</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-spring-boot-starter-jaxws</artifactId>
+			<version>3.1.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.13.3</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaLanguage>WSDL</schemaLanguage>
+					<generatePackage>cn.example.springboot.webservice</generatePackage>
+					<generateDirectory>${basedir}/src/main/java</generateDirectory>
+					<schemas>
+						<schema>
+							<fileset>
+								<!-- Defaults to schemaDirectory. -->
+								<directory>${basedir}/src/main/resources/schemas</directory>
+								<!-- Defaults to schemaIncludes. -->
+								<includes>
+									<include>*.wsdl</include>
+								</includes>
+							</fileset>
+						</schema>
+					</schemas>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
