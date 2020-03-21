@@ -6,7 +6,7 @@
 //
 
 
-package ywl.example.springboot.webservice;
+package cn.example.springboot.webservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="author" type="{http://www.lqdev.cn/webservice}author"/>
+ *         &lt;element name="author" type="{http://www.springboot.example.cn/webservice}author"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

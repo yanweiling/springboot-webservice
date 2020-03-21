@@ -6,8 +6,10 @@
 //
 
 
-package ywl.example.springboot.webservice;
+package cn.example.springboot.webservice;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="nonce" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="author" type="{http://www.springboot.example.cn/webservice}author" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "nonce"
+    "author"
 })
-@XmlRootElement(name = "authorListRequest")
-public class AuthorListRequest {
+@XmlRootElement(name = "authorListResponse")
+public class AuthorListResponse {
 
     @XmlElement(required = true)
-    protected String nonce;
+    protected List<Author> author;
 
     /**
-     * 获取nonce属性的值。
+     * Gets the value of the author property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getNonce() {
-        return nonce;
-    }
-
-    /**
-     * 设置nonce属性的值。
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the author property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getAuthor().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Author }
+     * 
+     * 
      */
-    public void setNonce(String value) {
-        this.nonce = value;
+    public List<Author> getAuthor() {
+        if (author == null) {
+            author = new ArrayList<Author>();
+        }
+        return this.author;
     }
 
 }

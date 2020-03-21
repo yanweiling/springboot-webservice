@@ -6,7 +6,7 @@
 //
 
 
-package ywl.example.springboot.webservice;
+package cn.example.springboot.webservice;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

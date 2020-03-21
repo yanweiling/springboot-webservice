@@ -5,5 +5,5 @@
 // 生成时间: 2020.03.21 时间 04:02:35 PM CST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.lqdev.cn/webservice", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package ywl.example.springboot.webservice;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.springboot.example.cn/webservice", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package cn.example.springboot.webservice;

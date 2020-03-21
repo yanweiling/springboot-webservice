@@ -6,7 +6,7 @@
 //
 
 
-package ywl.example.springboot.webservice;
+package cn.example.springboot.webservice;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="hobby" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
- *         &lt;element name="sex" type="{http://www.lqdev.cn/webservice}sex"/>
+ *         &lt;element name="sex" type="{http://www.springboot.example.cn/webservice}sex"/>
  *         &lt;element name="birthday" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>

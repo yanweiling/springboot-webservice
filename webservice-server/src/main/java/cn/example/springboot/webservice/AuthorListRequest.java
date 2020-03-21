@@ -6,7 +6,7 @@
 //
 
 
-package ywl.example.springboot.webservice;
+package cn.example.springboot.webservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="nonce" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "name"
+    "nonce"
 })
-@XmlRootElement(name = "authorRequest")
-public class AuthorRequest {
+@XmlRootElement(name = "authorListRequest")
+public class AuthorListRequest {
 
     @XmlElement(required = true)
-    protected String name;
+    protected String nonce;
 
     /**
-     * 获取name属性的值。
+     * 获取nonce属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getNonce() {
+        return nonce;
     }
 
     /**
-     * 设置name属性的值。
+     * 设置nonce属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setNonce(String value) {
+        this.nonce = value;
     }
 
 }
