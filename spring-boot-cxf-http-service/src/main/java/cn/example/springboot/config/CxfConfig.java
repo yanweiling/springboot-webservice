@@ -1,9 +1,11 @@
 package cn.example.springboot.config;
 
 //import cn.example.springboot.service.StudentServiceImpl;
+import cn.example.springboot.service.StudentServiceImpl;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.apache.cxf.Bus;
 import org.apache.cxf.bus.spring.SpringBus;
+import org.apache.cxf.jaxws.EndpointImpl;
 import org.apache.cxf.transport.servlet.CXFServlet;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -24,16 +26,16 @@ public class CxfConfig {
         return new SpringBus();
     }
 
-//    /**
-//     * @return
-//     */
-//    @Bean
-//    @Qualifier("studentServiceImpl") // 注入webService
-//    public Endpoint endpoint(StudentServiceImpl studentServiceImpl) {
-//        EndpointImpl endpoint = new EndpointImpl(springBus(), studentServiceImpl);
-//        endpoint.publish("/webService");// 暴露webService api,用在资源访问
-//        return endpoint;
-//    }
+    /**
+     * @return
+     */
+    @Bean
+    @Qualifier("studentServiceImpl") // 注入webService
+    public Endpoint endpoint(StudentServiceImpl studentServiceImpl) {
+        EndpointImpl endpoint = new EndpointImpl(springBus(), studentServiceImpl);
+        endpoint.publish("/webService");// 暴露webService api,用在资源访问
+        return endpoint;
+    }
 // 构造一个json转化bean，用于将student转化为json，因为后面需要用这个bean配置json转化，所以给他取个名
     @Bean("jsonProvider")
     public JacksonJsonProvider getJacksonJsonProvider(){
