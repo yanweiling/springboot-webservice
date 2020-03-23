@@ -12,6 +12,7 @@ public class Test {
     public void test(){
         WebClient client = WebClient.create("http://localhost:8082");
         client.path("/cxf/webservice/studentapi/getjson").accept("application/json").type("application/json");
-        Student response=client.get(Student.class);
+        String response=client.get(String.class);
+       System.out.println(response);
     }
 }
