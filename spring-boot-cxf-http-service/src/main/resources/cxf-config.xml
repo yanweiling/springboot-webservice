@@ -10,12 +10,12 @@
     <bean id="studentService" class="cn.example.springboot.resource.StudentInterfaceImpl">
     </bean>
     <!-- 配置需要暴露的BeanService -->
-    <jaxrs:server id="restContainer" address="/students"> <!-- 暴露restful api 类似于前文提到的webService【暴露soap】 -->
+    <jaxrs:server id="restContainer" address="/webservice"> <!-- 暴露restful api 类似于前文提到的webService【暴露soap】 -->
         <jaxrs:serviceBeans>
             <!-- 相当于打包发布服务 -->
             <ref bean="studentService" />
         </jaxrs:serviceBeans>
-<!--        &lt;!&ndash; 提供一个json转化，没有这个不能自动返回json jsonProvider就是前面@Bean生成的在CxfConfig &ndash;&gt;-->
+        <!-- 提供一个json转化，没有这个不能自动返回json jsonProvider就是前面@Bean生成的在CxfConfig -->
         <jaxrs:providers>
             <ref bean="jsonProvider" />
         </jaxrs:providers>
