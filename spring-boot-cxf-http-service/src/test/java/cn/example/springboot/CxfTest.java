@@ -1,7 +1,9 @@
 package cn.example.springboot;
 
 import cn.example.springboot.entity.Student;
+import cn.example.springboot.resource.StudentInterface;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.cxf.jaxrs.client.JAXRSClientFactory;
 import org.apache.cxf.jaxrs.client.WebClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,4 +28,6 @@ public class CxfTest {
 
         System.out.println(JSONObject.toJSONString(student));
     }
+
+
 }

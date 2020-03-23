@@ -2,17 +2,7 @@ package cn.example.springboot.resource;
 
 import cn.example.springboot.entity.Student;
 import cn.example.springboot.entity.Students;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import javax.jws.WebService;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
 
 public class StudentInterfaceImpl implements StudentInterface {

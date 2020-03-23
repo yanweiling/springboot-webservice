@@ -4,7 +4,6 @@ package cn.example.springboot.config;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.apache.cxf.Bus;
 import org.apache.cxf.bus.spring.SpringBus;
-import org.apache.cxf.jaxws.EndpointImpl;
 import org.apache.cxf.transport.servlet.CXFServlet;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
